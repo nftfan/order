@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mint NFT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            background-color: #222;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            position: relative; /* To position the "MINTED: 15" tab */
+        }
+     
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .description {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .description h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .description p {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .description p strong {
+            color: #4CAF50;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 18px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        /* Popup container */
+        .popup {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Popup content */
+        .popup-content {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+        }
+        .popup-content h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .popup-content p {
+            margin-bottom: 10px;
+        }
+        .small-button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .small-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Order your NFT</h2>
+        <img src="https://bafybeig4o6rtdny4mjqkgalk6z5sik4l434uyq5tlq4abtxvdbbtflvtxa.ipfs.nftstorage.link/" alt="NFT Image">
+        <div class="description">
+            <h3>NFTFAN 32 BIT DARK</h3>
+            <p><strong>Price:</strong> 1.0003610 $MATIC</p>
+            <p><strong>Description:</strong> Welcome to NFTFANS. This NFT is a property of NFTFANS TOKEN. Follow us on X @nftfanstoken. You also get free 2 000 000 000 000 000 $nftfan tokens with this purchase.</p>
+        </div>
+        <button id="mintBtn">ORDER NFT</button>
+    </div>
+
+  
+
+    <!-- Popup Modal -->
+    <div id="popupModal" class="popup">
+        <div class="popup-content">
+            <h2>NFT FANS TO THE MOON</h2>
+            <p>Pay NFT price to our official wallet:</p>
+            <p style="font-size: 10px;">0x92d550cdBc234211957Bd1B579d962c885A127Ba</p>
+
+            <p>You also get free 2 000 000 000 000 000 $nftfan tokens with this purchase.</p>
+			<p>You will receive your NFT and Tokens in 24h</p>
+            <a href="https://polygonscan.com/address/0x92d550cdbc234211957bd1b579d962c885a127ba" class="small-button" target="_blank">Confirm Payment</a>
+            
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("mintBtn").addEventListener("click", function() {
+            document.getElementById("popupModal").style.display = "flex";
+        });
+
+        document.getElementById("closeBtn").addEventListener("click", function() {
+            document.getElementById("popupModal").style.display = "none";
+        });
+    </script>
+</body>
+</html>
